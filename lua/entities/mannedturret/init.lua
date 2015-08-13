@@ -1,4 +1,3 @@
-`
 AddCSLuaFile( "cl_init.lua" )
 AddCSLuaFile( "shared.lua" )
 include( 'shared.lua' )
@@ -149,7 +148,7 @@ function ENT:Think()
 			end
 		end
 					
-		self.CPL = self.Pod2:GetPassenger()
+		self.CPL = self.Pod2:GetPassenger(1)
 		if (self.CPL and self.CPL:IsValid()) then
 						
 			self.CPL:CrosshairEnable()
@@ -174,8 +173,8 @@ function ENT:Think()
 			
 			local physi1 = self.Pod2:GetPhysicsObject()
 			local physi2 = self.Entity:GetPhysicsObject()
-			physi1:AddAngleVelocity((physi1:GetAngleVelocity() * -1) + Angle(0,CPLA.p * 2,0))
-			physi2:AddAngleVelocity((physi2:GetAngleVelocity() * -1) + Angle(0,0,CPLA.y * 5))
+			physi1:AddAngleVelocity((physi1:GetAngleVelocity() * -1) + Vector(0,CPLA.p * 2,0))
+			physi2:AddAngleVelocity((physi2:GetAngleVelocity() * -1) + Vector(0,0,CPLA.y * 5))
 			
 			
 			--self.CPL:SetEyeAngles(self.CPL:EyeAngles() * 0.1)
@@ -226,11 +225,11 @@ function ENT:Think()
 		
 			local physi1 = self.Pod2:GetPhysicsObject()
 			
-			physi1:AddAngleVelocity((physi1:GetAngleVelocity() * -1) + Angle(0,Pitch,0))
+			physi1:AddAngleVelocity((physi1:GetAngleVelocity() * -1) + Vector(0,Pitch,0))
 			
 			local physi2 = self.Entity:GetPhysicsObject()
 			
-			physi2:AddAngleVelocity((physi2:GetAngleVelocity() * -1) + Angle(0,0,Yaw))
+			physi2:AddAngleVelocity((physi2:GetAngleVelocity() * -1) + Vector(0,0,Yaw))
 			
 			self.Pitch = 0
 			self.Yaw = 0
