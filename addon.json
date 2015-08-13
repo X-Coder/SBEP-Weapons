@@ -1,0 +1,11 @@
+
+{
+	"title"		: "SBEP Entities",
+	"type"		: "weapon",
+	"tags"		: [ "fun" ],
+	"ignore"	: [
+		"*.psd",
+		"*.vcproj",
+		"*.svn*"
+	]
+}
