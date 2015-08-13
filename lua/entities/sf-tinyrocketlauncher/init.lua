@@ -1,7 +1,6 @@
 
 AddCSLuaFile( "cl_init.lua" )
 AddCSLuaFile( "shared.lua" )
-include('entities/base_wire_entity/init.lua')
 include( 'shared.lua' )
 --util.PrecacheSound( "NPC_Ministrider.FireMinigun" )
 --util.PrecacheSound( "WeaponDissolve.Dissolve" )
